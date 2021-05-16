@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create PC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light px-4" style="background-color: #696969;">
+        <div class=" container-fluid">
+            <a class="navbar-brand abs" href="/">CNPC</a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="collapseNavbar">
+                <ul class="navbar-nav">
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/computer">My Computers</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/account">Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/support">Support</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <h2 class="my-3">Start creating your new PC</h2>
+
+        <form action="/computer/create" method="POST" class="">
+
+            <div class="card " style="background-color: #969696;">
+                <div class="card-body ">
+                    <h4>Choose your OS</h4>
+                    <select class="form-select" aria-label="Select OS" name="os">
+                        <option value="Ubuntu" selected>Ubuntu</option>
+                        <option value="Debian">Debian</option>
+                        <option value="Arch">Arch</option>
+                        <option value="Windows">Windows</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card mt-3" style="background-color: #969696;">
+                <div class="card-body ">
+                    <h4 class="">Choose your region</h4>
+                    <select class="form-select" aria-label="Select OS" name="region">
+                        <option value="Kochi" selected>India - Kochi</option>
+                        <option value="Chennai">India - Chennai</option>
+                        <option value="Bengaluru">India - Bengaluru</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="card mt-3" style="background-color: #969696;">
+                <div class="card-body ">
+                    <h4 class="">Choose your plan</h4>
+                    <div class="card" style="background-color: #fcf5ff;">
+                        <div class=" card-body ">
+                            <table class=" table table-responsive table-hover table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th>Plan</th>
+                                        <th>Monthly</th>
+                                        <th>CPU</th>
+                                        <th>RAM</th>
+                                        <th>Storage</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" id='micro' name="plan" value="Micro">
+                                                    Micro</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>1000</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>1v CPU</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>2GB</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>50GB</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" id='mini' name="plan" value="Mini">
+                                                    Mini</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>2000</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>2v CPU</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>4GB</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>100GB</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" id='basic' name="plan" value="Basic">
+                                                    Basic</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>5000</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>4v CPU</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>8GB</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>250GB</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" id='full' name="plan" value="Full">
+                                                    Full</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>10000</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>8v CPU</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>12GB</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>500GB</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" id='super' name="plan" value="Super">
+                                                    Super</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>15000</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>16v CPU</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>16GB</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radiotext">
+                                                <label for='regular'>1000GB</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-3" style="background-color: #969696;">
+                <div class="card-body ">
+                    <h4 class="">Choose root password</h4>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name="rootpass">
+                </div>
+            </div>
+
+            <button type="submit" class="btn my-3 btn-lg" style="background-color: #2cb438;">Create PC</button>
+            <!-- <a href=" /login" class="btn btn-outline-info m-3" role="button">Login</a> -->
+        </form>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
