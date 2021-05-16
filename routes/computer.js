@@ -17,7 +17,7 @@ router.get("/", function (req, res, next) {
       console.log(response);
       vm = response.data.data;
       console.log(JSON.stringify(vm));
-      res.render("computer", {vm});
+      res.render("computer", { vm });
     });
 });
 
@@ -69,7 +69,7 @@ router.post("/create", async (req, res) => {
       .post("https://192.168.0.100:8006/api2/json/nodes/appledore/qemu", data, {
         headers: {
           Cookie: cookieSring,
-          "CSRFPreventionToken" : "60A13D81:SqVCOHAMbGMCY5u1QSDYFXPRTrjA2TuWWiUyidT+pDU"
+          "CSRFPreventionToken": "60A13D81:SqVCOHAMbGMCY5u1QSDYFXPRTrjA2TuWWiUyidT+pDU"
         },
       })
       .then((response) => {
