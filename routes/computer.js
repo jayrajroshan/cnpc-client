@@ -1,8 +1,12 @@
 var express = require("express");
 var router = express.Router();
 const axios = require("axios");
-var cookieSring =
-  "PVEAuthCookie=PVE:root@pam:60A13D81::bUL69l1JeuJdm6qKfrJ4Z2jZb4tNAB5A2DR++xAwYrNkK0vavVquDok5d+j8LJkuSGaWXbnsxWl6aGcSV7XLVR0haNLq/m5YrD8AYT+96RJOo1+ER4tiRcti+4Q1h40QcgTDxnMF3wM00fFDW/648a2/DauO3Qu2EOB0nAjTS5w23De9WsG/r3KT4Mv7zOdxHGfwZXU5pfdJslCNObxmhSAQtXmMCIx7fV3WtSLOEIbTOxgdGt5//Q8gLu5eySiPvoV1XEFhfsHabn+ofZzg/9Pq4NRe3C6haIBAhRQ1PmnPhS0j3JguO8ZSJs/+effnB9i5bmWiAyHj29jaYmAIeQ==";
+
+var token = require("../token.json");
+var cookieSring = "PVEAuthCookie=" + token.data.ticket;
+
+// var cookieSring =
+//   "PVEAuthCookie=PVE:root@pam:60A1CB95::tXC4ARb/SxZfv1NfcCcBv355a1kiluPdVd9HNl5NXZq73CXa135Pixy3OEu1tsgH5psK/DWgUzwcyBW9Dr1FMIuaHg86h+z43iwSLeO5D4UutVD6c0ucNTzxYtkF3BCQbbjayixss54CyI0gieu00zxA/Xg/hkDuK8q3RktJKIZu5+yarFu93XB5IiU05WmxaNvHlqPtIv0oVaY4LnMX1AUo+CmBIk5LFdak1dE1BmENk4lgWf3+Vr5fUNzqXdivksfit33I1TkLpwRCSThWhTBxxslrWjlanpqThcINwgT/sxl5KEDeG1tMcMk3aqXIo7Oq4kwK0BqJxSczeK9nBw==";
 
 /* GET users listing. */
 router.get("/", function (req, res, next) {
@@ -69,7 +73,7 @@ router.post("/create", async (req, res) => {
       .post("https://192.168.0.100:8006/api2/json/nodes/appledore/qemu", data, {
         headers: {
           Cookie: cookieSring,
-          "CSRFPreventionToken": "60A13D81:SqVCOHAMbGMCY5u1QSDYFXPRTrjA2TuWWiUyidT+pDU"
+          "CSRFPreventionToken": token.data.CSRFPreventionToken
         },
       })
       .then((response) => {
